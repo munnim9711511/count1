@@ -1,0 +1,22 @@
+<div class="container">
+    <h5 class="dh right-align">މުޢައްސަސާ ތަކުގެ އިޢުލާންތައް</h5>
+<hr>
+<div class="row">
+<div class="col s12">
+<ul class="right-align">
+    @foreach (var item in ViewBag.organization)
+    {
+        <li class="dh" style="direction: rtl;"><a href="~/AnounceDoc/@item.DocUrl" tabindex="blank">
+        
+         <img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;padding-left: 5px;">
+        @item.Title
+        </a>
+        
+       
+        </li>
+    }
+
+</ul>
+</div>
+</div>
+</div>

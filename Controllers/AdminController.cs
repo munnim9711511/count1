@@ -65,9 +65,9 @@ namespace Coun.Controllers {
         }
 
         [HttpPost]
-        public IActionResult Anouncements (AnouncementsModel AnM ,IFormFile Doc) {
+        public IActionResult Anouncements (AnouncementsModel AnM, IFormFile Doc) {
 
-                if (Doc != null) {
+            if (Doc != null) {
                 var fileName = Path.Combine (he.WebRootPath + "/anounceDoc", Path.GetFileName (Doc.FileName));
                 Doc.CopyTo (new FileStream (fileName, FileMode.Create));
                 AnM.DocUrl = Path.GetFileName (Doc.FileName);
@@ -83,6 +83,20 @@ namespace Coun.Controllers {
         }
         public IActionResult Cafey () {
             return View ();
+        }
+
+        [HttpPost]
+        public IActionResult Cafey (CafeyModel cM, IFormFile pic) {
+            if (pic != null) {
+                var fileName = Path.Combine (he.WebRootPath + "/cafey", Path.GetFileName (pic.FileName));
+                pic.CopyTo (new FileStream (fileName, FileMode.Create));
+                cM.ImgUrl = Path.GetFileName (pic.FileName);
+
+                _db.CafeyModels.Add (cM);
+                _db.SaveChanges ();
+
+            }
+            return View ("Cafey");
         }
         public IActionResult Bussiness () {
             return View ();

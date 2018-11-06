@@ -1,0 +1,18 @@
+<div class="conainer">
+    <h5 class="dh right-align">ކައުންސިލަރގެ  ކައުންސިލަރގެ މަޢުލޫމާތު</h5>
+    <hr>
+<div class="row center-align">
+
+    @foreach (var item in ViewBag.conciller)
+    {
+           <div class = "col s12">
+               <h6 class="dh right-align">@item.Title</h6>
+        <img src="~/LinkPic/@item.ImgUrl" class="center">
+        <p class="dh right-align">  
+            @item.Text
+        </p>
+    </div>
+    }
+ 
+</div>
+</div>

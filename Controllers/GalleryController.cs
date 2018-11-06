@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using coouncil.Models;
+using Coun.Data;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Coun.Controllers
-{
-    public class GalleryController : Controller
-    {
-        public IActionResult Index(string type)
-        {
-            
-            return View();
+namespace Coun.Controllers {
+    public class GalleryController : Controller {
+        private readonly DataContext _db;
+        public GalleryController (DataContext _db) {
+            this._db = _db;
+        }
+        public IActionResult Index (string type) {
+            ViewBag.Images = _db.GalleryModels.ToArray();
+            return View (ViewBag);
         }
 
-     
     }
 }

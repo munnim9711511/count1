@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+         <h5 class="dh">ގެސްޓް ހައުސް ތަކުގެ މަޢުލޫމާތު</h5>
+            <hr>
+            @foreach (var item in  ViewBag.GH)
+            {
+                  <div class="col s12">
+                      <h5>@item.Title</h5>
+                      <img src="~/LinkPic/@item.ImgUrl" alt="">
+                      <p>
+                          @item.Text
+                      </p>
+                     </div>
+            }
+      
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="">
+<h4 class="dh right-align">
+           ހަބަރު   
+        
+</h4>
+<hr>
+<div class="row">
+     <div class="col  s12 right">
+           
+    
+       @foreach (var item in ViewBag.news)
+       {
+           <div class="row">
+       
+               <div class="col s6"><img src="~/newsImage/@item.ImgUrl" style="width: 85%;" class="responsive-img"></div>
+                <div class="col s5 right-align"><a class="dh right-align" style="font-size: 19px;" href="@Url.Action("Index","News",new{id =@item.Id})">@item.Title</a></div>
+           </div>
+           <hr>
+           
+              
+           
+       }
+         
+        </div>
+</div>
+</div>

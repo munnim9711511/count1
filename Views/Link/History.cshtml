@@ -1,0 +1,16 @@
+<div class="container center-align">
+    <h5 class="dh right-align">މާމިގިލީ ގައި ހުރި މުހިންމު ތަންތަނުގެ މަޢުލޫމާތު</h5>
+
+<hr>
+        <div class="row">
+        @foreach (var item in  ViewBag.history)
+        {
+            <h6 class=" dh right-align">
+                @item.Title
+            </h6>
+            <img src="~/LinkPic/@item.ImgUrl" class="center-align"/>
+           
+        }
+        </div>
+
+</div>

@@ -22,6 +22,8 @@ namespace Coun.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Catogary");
+
                     b.Property<string>("DocUrl");
 
                     b.Property<string>("Title");

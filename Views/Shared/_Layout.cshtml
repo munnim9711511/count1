@@ -60,7 +60,7 @@
         <li><a class="dropdown-trigger dh" href="#!" data-target="dropdown3">   <i class="material-icons left">arrow_drop_down</i> ގެލެރީ</a></li>
         
 
-        <li><a href="badges.html" class="dh">ޙަބަރު</a></li>
+        <li><a href="@Url.Action("News","Home")" class="dh">ޙަބަރު</a></li>
         <li><a class="dropdown-trigger dh" href="#!" data-target="dropdown2">   <i class="material-icons left">arrow_drop_down</i> އދ.މާމިގިލި    </a></li>
        
         <li><a class="dropdown-trigger dh" href="#!" data-target="dropdown1">   <i class="material-icons left">arrow_drop_down</i> އދ.މާމިގިލި ކައުންސިލް   </a></li>
@@ -143,18 +143,18 @@
   <li><a href="" class="dh right-align"> ވީޑިއޯ</a></li>
       </ul>
  <ul id="dropdown9" class="dropdown-content">
-  <li><a href=@Url.Action("Info","Link",new{id ="IslandInfo"})   class="dh right-align" >ރަސާއި ބެހޭ މައުޟޫމާތު</a></li>
-  <li><a href="Link/Info/GO" class="dh right-align"> ސަރުކާރުގެ އިދާރާތައް</a></li>
+  <li><a href="@Url.Action("Info","Link",new{id ="IslandInfo"})"   class="dh right-align" >ރަސާއި ބެހޭ މައުޟޫމާތު</a></li>
+  <li><a href="@Url.Action("Info","Link",new{id="GO"})" class="dh right-align"> ސަރުކާރުގެ އިދާރާތައް</a></li>
   
-  <li><a href="Link/Info/airpor" class="dh right-align"> ވިލާ އެއަރޕޯޓް</a></li>
-  <li><a href="#!" class="dh right-align"> މާމިގިލި ބައިނަލް އަޤްވާމީ  ބަނދަރު</a></li>LocalAnounce
-  <li><a href="#!" class="dh right-align"> މާމިގިލީގެ މުހިއްމު ތަންތަން</a></li>
-  <li><a href="#!" class="dh right-align"> ގެސްޓް ހައުސްތައް </a></li>
-  <li><a href="#!" class="dh right-align">  ކެފޭ / ރެސްޓޯރަންޓް </a></li>
-  <li><a href="#!" class="dh right-align">  ވިޔަފާރި </a></li>
+  <li><a href="@Url.Action("Info","Link",new{id="airport"})" class="dh right-align"> ވިލާ އެއަރޕޯޓް</a></li>
+  <li><a href="@Url.Action("Info","Link",new{id="harbour"})" class="dh right-align"> މާމިގިލި ބައިނަލް އަޤްވާމީ  ބަނދަރު</a></li>LocalAnounce
+  <li><a href="@Url.Action("History","Link")" class="dh right-align"> މާމިގިލީގެ މުހިއްމު ތަންތަން</a></li>
+  <li><a href="@Url.Action("GuestHouse","Link")" class="dh right-align"> ގެސްޓް ހައުސްތައް </a></li>
+  <li><a href="@Url.Action("cafey","Home")" class="dh right-align">  ކެފޭ / ރެސްޓޯރަންޓް </a></li>
+  <li><a href="@Url.Action("Bussiness","Link")" class="dh right-align">  ވިޔަފާރި </a></li>
       </ul>
                     <ul id="dropdown10" class="dropdown-content">
-  <li><a href="#!" class="dh right-align" >ކައުންސިލަރ</a></li>
+  <li><a href="@Url.Action("Counciller","Home",new{id="counciler"})" class="dh right-align" >ކައުންސިލަރ</a></li>
   <li><a href="#!" class="dh right-align">ހިންގާ ޤަވައިދު</a></li>
   
   <li><a href="#!" class="dh right-align"> ޖަލްސާ</a></li>
@@ -178,12 +178,12 @@
       </ul>
 
       <ul id="dropdown3" class="dropdown-content">
-  <li><a href="Gallery/Index/photo" class="dh right-align" >ފޮޓޯ</a></li>
+  <li><a href="@Url.Action("Index","Gallery")" class="dh right-align" >ފޮޓޯ</a></li>
   <li><a href="" class="dh right-align"> ވީޑިއޯ</a></li>
       </ul>
 
     <ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!" class="dh right-align" >ކައުންސިލަރ</a></li>
+  <li><a href="@Url.Action("Counciller","Home",new{id="counciler"})" class="dh right-align" >ކައުންސިލަރ</a></li>
   <li><a href="#!" class="dh right-align">ހިންގާ ޤަވައިދު</a></li>
   
   <li><a href="#!" class="dh right-align"> ޖަލްސާ</a></li>
@@ -199,14 +199,14 @@
 </ul>
    <ul id="dropdown2" class="dropdown-content" >
   <li><a href=@Url.Action("Info","Link",new{id ="IslandInfo"})  class="dh right-align" >ރަސާއި ބެހޭ މައުޟޫމާތު</a></li>
-  <li><a href="Link/Info/GO" class="dh right-align"> ސަރުކާރުގެ އިދާރާތައް</a></li>
+  <li><a href="@Url.Action("Info","Link",new{id="GO"})" class="dh right-align"> ސަރުކާރުގެ އިދާރާތައް</a></li>
   
-  <li><a href="Link/Info/airport" class="dh right-align"> ވިލާ އެއަރޕޯޓް</a></li>
+  <li><a href="@Url.Action("Info","Link",new{id="airport"})" class="dh right-align"> ވިލާ އެއަރޕޯޓް</a></li>
   <li><a href="#!" class="dh right-align"> މާމިގިލި ބައިނަލް އަޤްވާމީ  ބަނދަރު</a></li>
-  <li><a href="#!" class="dh right-align"> މާމިގިލީގެ މުހިއްމު ތަންތަން</a></li>
-  <li><a href="#!" class="dh right-align"> ގެސްޓް ހައުސްތައް </a></li>
-  <li><a href="#!" class="dh right-align">  ކެފޭ / ރެސްޓޯރަންޓް </a></li>
-  <li><a href="#!" class="dh right-align">  ވިޔަފާރި </a></li>
+  <li><a href="@Url.Action("History","Link")" class="dh right-align"> މާމިގިލީގެ މުހިއްމު ތަންތަން</a></li>
+  <li><a href="@Url.Action("GuestHouse","Link")" class="dh right-align"> ގެސްޓް ހައުސްތައް </a></li>
+  <li><a href="@Url.Action("cafey","Home")" class="dh right-align">  ކެފޭ / ރެސްޓޯރަންޓް </a></li>
+  <li><a href="@Url.Action("Bussiness","Link")" class="dh right-align">  ވިޔަފާރި </a></li>
 
  
 
@@ -214,9 +214,6 @@
 </ul>
   <br>
     @RenderBody()
-
-    </div>
-   
 
   <footer class="page-footer #212121 grey darken-4 white-text">
           <div class="container">
@@ -230,10 +227,14 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © @DateTime.Now.Year Copyright Text
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
         </footer>
+    </div>
+   
+
+
 </body>
 </html>

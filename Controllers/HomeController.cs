@@ -15,13 +15,29 @@ namespace Coun.Controllers {
             this._db = _db;
         }
         public IActionResult Index () {
-            ViewBag.anouncements = _db.anouncementsModels.ToArray().Take(6);
+            ViewBag.gallery = _db.GalleryModels.ToArray ().Take (6);
+            ViewBag.anouncements = _db.anouncementsModels.ToArray ().Take (6);
             ViewBag.news = _db.NewsModels.ToArray<NewsModel> ().Take<NewsModel> (6);
             ViewBag.slider = _db.SliderModels.ToArray ().Take (4);
             return View (ViewBag);
         }
+
         [HttpGet]
-       
+        public IActionResult Cafey () {
+            ViewBag.cafey = _db.CafeyModels.ToArray ();
+
+            return View (ViewBag);
+        }
+
+        [HttpGet]
+        public IActionResult News () {
+            ViewBag.news = _db.NewsModels.ToArray ().OrderByDescending (x => x.Id);
+
+            return View (ViewBag);
+        }
+
+        [HttpGet]
+
         public IActionResult About () {
             ViewData["Message"] = "Your application description page.";
 
@@ -32,6 +48,11 @@ namespace Coun.Controllers {
             ViewData["Message"] = "Your contact page.";
 
             return View ();
+        }
+        [HttpGet]
+        public IActionResult Counciller (string id) {
+            ViewBag.conciller = _db.LinkModels.Where(x=>x.Catogary ==id).ToArray();
+            return View (ViewBag);
         }
 
         public IActionResult Privacy () {

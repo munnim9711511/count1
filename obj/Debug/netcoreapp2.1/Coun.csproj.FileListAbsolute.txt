@@ -54,3 +54,9 @@ C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Gallery\Index.g
 C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Gallery.g.cshtml.cs
 C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\News\Index.g.cshtml.cs
 C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Anouncements.g.cshtml.cs
+C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Home\Cafey.g.cshtml.cs
+C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Home\News.g.cshtml.cs
+C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Link\History.g.cshtml.cs
+C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Link\GuestHouse.g.cshtml.cs
+C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Link\Bussiness.g.cshtml.cs
+C:\Users\Munnim\Desktop\Coun\obj\Debug\netcoreapp2.1\Razor\Views\Home\Counciller.g.cshtml.cs

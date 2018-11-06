@@ -5,14 +5,15 @@
 
 
 $(() => {
-  
+
     $('.slider').slider({
-        height:500
+        height: 500
     });
     $('.sidenav').sidenav({
         edge: "right"
     });
     $('.dropdown-trigger').dropdown();
-  
+
     $('select').formSelect();
+    $('.materialboxed').materialbox();
 });

@@ -1,0 +1,11 @@
+<div class="row">
+    <h5 class="dh right-align" >ގެލަރީ</h5>
+    <hr>
+    <div class="col s12">
+        @foreach (var item in  ViewBag.Images)
+        {
+            <img src="~/gallery/@item.ImgUrl" style="width: 25%;" data-caption="@item.Text" class="materialboxed ">
+
+        }
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="col s12">
+    <h5 style="font-family: Faruma" class="right-align" >ކެފޭ ތަކުގެ މަޢުލޫމާތު</h5>
+</div>
+
+<div class="container">
+@foreach (var item in ViewBag.cafey )
+{
+    <h5 style="font-family: Faruma" class="right-align">
+        @item.Title
+    </h5>
+   <img src="~/cafey/@item.ImgUrl " alt="" class="responsive-img"> 
+   <p class="dh " style="text-align: justify;">
+       @item.Text
+   </p>
+}
+</div>
