@@ -13,7 +13,7 @@ namespace Coun.Controllers
     {
         private readonly SignInManager<IdentityUser> _siginManager;
         private readonly UserManager<IdentityUser> _userManager;
-        public AccountController(SignInManager<IdentityUser> _siginManager,UserManager<IdentityUser> _userManager)
+        public AccountController(SignInManager<IdentityUser> _siginManager, UserManager<IdentityUser> _userManager)
         {
             this._userManager = _userManager;
             this._siginManager = _siginManager;
@@ -23,15 +23,24 @@ namespace Coun.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            var result = _siginManager.SignOutAsync();
+            return RedirectToAction("Login", "Account");
+        }
+
         [HttpPost]
         public async Task<IActionResult> Login(UserModel user)
         {
-            var result = await _siginManager.PasswordSignInAsync(user.UserName,user.Password,user.RememberMe,false);
-            if(!result.Succeeded){
-                  return RedirectToAction("Login","Account");
+            var result = await _siginManager.PasswordSignInAsync(user.UserName, user.Password, user.RememberMe, false);
+            if (!result.Succeeded)
+            {
+                return RedirectToAction("Login", "Account");
             }
 
-            return RedirectToAction("Index","Admin");
+            return RedirectToAction("Index", "Admin");
         }
 
 

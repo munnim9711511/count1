@@ -38,9 +38,16 @@
       <br>
      
     </div></li>
+
+    <!-- @User -->
+    @if(User.IsInRole("Administrator"))
+    {
+    <li><a href="@Url.Action("Users","Admin")">manage user</a></li>
+
+    }
+  
     <li><div class="divider"></div></li>
     <li><a href="@Url.Action("News","Admin")">upload news</a></li>
-    <li><a href="@Url.Action("Users","Admin")">manage user</a></li>
     <li><a href="@Url.Action("Slider","Admin")">slider</a></li>
     <li><a href="@Url.Action("UploadDoc","Admin")">upload doc</a></li>
     <li><a href="@Url.Action("UpdateLink","Admin")">update url link</a></li>
@@ -48,7 +55,7 @@
     <li><a href="@Url.Action("Bussiness","Admin")">Bussines</a></li>
      <li><a href="@Url.Action("Gallery","Admin")">Gallery</a></li>
     <li><a href="@Url.Action("Anouncements","Admin")">Anouncements</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <li><a class="waves-effect" href="#!">Logout</a></li>
   </ul>
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
   <div class="container">
