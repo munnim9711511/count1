@@ -49,9 +49,21 @@ namespace Coun.Controllers {
 
             return View ();
         }
+
         [HttpGet]
         public IActionResult Counciller (string id) {
-            ViewBag.conciller = _db.LinkModels.Where(x=>x.Catogary ==id).ToArray();
+            ViewBag.conciller = _db.LinkModels.Where (x => x.Catogary == id).ToArray ();
+            return View (ViewBag);
+        }
+
+        [HttpGet]
+        public IActionResult RunningRules (string id) {
+            ViewBag.runningRules = _db.LinkModels.Where (x => x.Catogary == id).ToArray ();
+            return View (ViewBag);
+        }
+    
+        public IActionResult MeetingSummery (string id) {
+            ViewBag.meeting = _db.LinkModels.Where (x => x.Catogary == id).ToArray ();
             return View (ViewBag);
         }
 

@@ -1,0 +1,16 @@
+<div class="container">
+    <h5 class="dh right-align">ބައްދަލުވުންތަކުގެ ތަފްސީލް</h5>
+    <hr>
+   <div>
+       <div class="row">
+           <div class="col s12">
+               <ul>
+                   @foreach (var item in ViewBag.meeting)
+                   {
+                       <li><a href="~/LinkPic/@item.ImgUrl"> <h6 class="dh right-align">@item.Title</h6></a></li>
+                   }
+               </ul>
+           </div>
+       </div>
+   </div> 
+</div>
