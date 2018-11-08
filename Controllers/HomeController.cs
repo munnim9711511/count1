@@ -51,6 +51,15 @@ namespace Coun.Controllers {
         }
 
         [HttpGet]
+           public IActionResult MaamigiliContact () {
+            
+
+            return View ();
+        }
+
+
+
+        [HttpGet]
         public IActionResult Counciller (string id) {
             ViewBag.conciller = _db.LinkModels.Where (x => x.Catogary == id).ToArray ();
             return View (ViewBag);

@@ -64,7 +64,7 @@ using Coun.Models;
             WriteLiteral("                 <video class=\"responsive-video\" controls style=\"width: 30%;\">\n    ");
             EndContext();
             BeginContext(310, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("source", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "0bb236313d204c798f4c51f102569e1a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("source", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d42f237bb16b49869cca640a3b688080", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

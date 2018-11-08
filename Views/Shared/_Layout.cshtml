@@ -45,9 +45,9 @@
     <div class="nav-wrapper left ">
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="badges.html" class="dh"><img src="~/images/icon/eng.png" style="width: 35px;"> </a></li>
+        <li><a  class="dropdown-trigger dh right-align" href="#!" data-target="dropdown12"><img src="~/images/icon/eng.png" style="width: 35px;"> </a></li>
 
-        <li><a href="badges.html" class="dh">  ގުޅުއްވާ</a></li>
+        <li><a href="@Url.Action("MaamigiliContact","Home")" class="dh">  ގުޅުއްވާ</a></li>
 
         <li><a href="badges.html" class="dh">  ލިންކުތައް</a></li>
 
@@ -110,21 +110,18 @@
                   </a>
               </li>
               <li><a href="badges.html" class="dh right-align">  ލިންކުތައް</a></li>
-              <li><a href="badges.html" class="dh right-align">  ގުޅުއްވާ</a></li>
+              <li><a href="@Url.Action("MaamigiliContact","Home")" class="dh right-align">  ގުޅުއްވާ</a></li>
 
               <li><a href="badges.html" class="dh right-align"><img src="~/images/icon/eng.png" style="width: 35px;"> </a></li>
 
-
-
-
-
-
-
-
-
-
           </ul>
-
+   <ul id="dropdown12" class="dropdown-content" style="font-size: 9%;">
+          <li><a href="" class="dh left-align" >  Council</a></li>
+          <li><a href="#!" class="dh left-align">  Rules & Regulations</a></li>
+          <li><a href="#!" class="dh left-align">    Meetings</a></li>
+          <li><a href="#!" class="dh left-align">    Responsibilities</a></li>
+          <li><a href="#!" class="dh left-align">    Services</a></li>
+              </ul>
 
           <ul id="dropdown6" class="dropdown-content">
           <li><a href="" class="dh right-align" >  ފޯމް</a></li>
@@ -198,7 +195,7 @@
 
 </ul>
    <ul id="dropdown2" class="dropdown-content" >
-  <li><a href=@Url.Action("Info","Link",new{id ="IslandInfo"})  class="dh right-align" >ރަސާއި ބެހޭ މައުޟޫމާތު</a></li>
+  <li><a href=@Url.Action("Info","Link",new{id ="IslandInfo"})  class="dh right-align" >ރަށާއި ބެހޭ މައުޟޫމާތު</a></li>
   <li><a href="@Url.Action("Info","Link",new{id="GO"})" class="dh right-align"> ސަރުކާރުގެ އިދާރާތައް</a></li>
 
   <li><a href="@Url.Action("Info","Link",new{id="airport"})" class="dh right-align"> ވިލާ އެއަރޕޯޓް</a></li>
