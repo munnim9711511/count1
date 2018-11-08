@@ -1,0 +1,22 @@
+<div class="container">
+    <h5 class="dh right-align">ފޯމް</h5>
+    <hr>
+    <div class="row  ">
+        <div class="col m4 s12 right">
+            <ul class=" ">
+                   @foreach (var item in  ViewBag.Form)
+            {
+                <li class="dh" style="font-family: Faruma;direction: rtl;">
+                    <a href="~/LinkPic/@item.ImgUrl"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;">
+                    
+                    @item.Title
+                    </a>
+                </li>
+                
+            }
+            </ul>
+         
+        </div>
+    </div>
+
+</div>

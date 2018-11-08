@@ -3,39 +3,39 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using coouncil.Models;
+using Coun.Data;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Coun.Controllers
-{
-    public class DownloadController : Controller
-    {
-        public IActionResult Index()
-        {
-            
-            return View();
+namespace Coun.Controllers {
+    public class DownloadController : Controller {
+        private DataContext _db;
+
+        public DownloadController (DataContext _db) {
+            this._db = _db;
         }
-        public IActionResult Form()
-        {
-            return View();
-        }
-        public IActionResult Law()
-        {
-            return View();
-        }
-        public IActionResult Ausule()
-        {
-            return View();
-        }
-        public IActionResult Report()
-        {
-            return View();
-        }
-        public IActionResult Documents()
-        {
-            return View();
+        public IActionResult Index () {
+
+            return View ();
         }
 
-     
+        [HttpGet]
+        public IActionResult Form () {
+            ViewBag.Form = _db.LinkModels.Where (x => x.Catogary == "forms").ToArray ();
+            return View (ViewBag);
+        }
+        public IActionResult Law () {
+            return View ();
+        }
+        public IActionResult Ausule () {
+            return View ();
+        }
+        public IActionResult Report () {
+            return View ();
+        }
+        public IActionResult Documents () {
+            return View ();
+        }
+
     }
 }

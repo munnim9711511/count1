@@ -1,0 +1,16 @@
+<div class="">
+    <h5 class="dh right-align">ވީޑިއޯ ގެލަރީ</h5>
+    <hr>
+    <div class="row">
+        <div class="col s12">
+           
+            @foreach (var item in  ViewBag.videoGallery)
+            {
+                 
+                 <video class="responsive-video" controls style="width: 30%;">
+    <source src="~/gallery/@item.ImgUrl" type="video/mp4" >
+  </video>
+            }
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,7 +15,7 @@ namespace Coun.Controllers {
             this._db = _db;
         }
         public IActionResult Index () {
-            ViewBag.gallery = _db.GalleryModels.ToArray ().Take (6);
+            ViewBag.gallery = _db.GalleryModels.Where(x=>x.Text == "photo").ToArray ().Take (6);
             ViewBag.anouncements = _db.anouncementsModels.ToArray ().Take (6);
             ViewBag.news = _db.NewsModels.ToArray<NewsModel> ().Take<NewsModel> (6);
             ViewBag.slider = _db.SliderModels.ToArray ().Take (4);
@@ -61,9 +61,15 @@ namespace Coun.Controllers {
             ViewBag.runningRules = _db.LinkModels.Where (x => x.Catogary == id).ToArray ();
             return View (ViewBag);
         }
-    
+
+        [HttpGet]
         public IActionResult MeetingSummery (string id) {
             ViewBag.meeting = _db.LinkModels.Where (x => x.Catogary == id).ToArray ();
+            return View (ViewBag);
+        }
+
+        public IActionResult VideoGallery () {
+            ViewBag.videoGallery = _db.GalleryModels.Where (x => x.Text == "video").ToArray ();
             return View (ViewBag);
         }
 

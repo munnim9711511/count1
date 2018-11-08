@@ -11581,11 +11581,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/munnim/MUNNIM/Coun/Coun.csproj",
+      "projectUniqueName": "/home/munnim/Desktop/count1/Coun.csproj",
       "projectName": "Coun",
-      "projectPath": "/media/munnim/MUNNIM/Coun/Coun.csproj",
+      "projectPath": "/home/munnim/Desktop/count1/Coun.csproj",
       "packagesPath": "/home/munnim/.nuget/packages/",
-      "outputPath": "/media/munnim/MUNNIM/Coun/obj/",
+      "outputPath": "/home/munnim/Desktop/count1/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
