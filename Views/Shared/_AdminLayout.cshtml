@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,12 +9,14 @@
 
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/angular.min.js"></script>
+    <script src="~/js/app.js"></script>
      <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="~/materialize/css/materialize.min.css">
     <!-- <link  rel="stylesheet" href="~\materialize\css\materialize.min.css"> -->
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="~/materialize/js/materialize.min.js"></script>
             
 
     <script src="~/js/site.js"></script>
@@ -49,6 +51,7 @@
   
     <li><div class="divider"></div></li>
     <li><a href="@Url.Action("News","Admin")">upload news</a></li>
+     <li><a href="@Url.Action("UpdateNews","Admin")">update news</a></li>
     <li><a href="@Url.Action("Slider","Admin")">slider</a></li>
     <li><a href="@Url.Action("UploadDoc","Admin")">upload doc</a></li>
     <li><a href="@Url.Action("UpdateLink","Admin")">update url link</a></li>

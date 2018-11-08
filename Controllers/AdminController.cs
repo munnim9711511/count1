@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 
 namespace Coun.Controllers
 {
@@ -70,12 +71,14 @@ namespace Coun.Controllers
             }
             return View("News");
         }
+        [HttpGet]
+        // public IActionResult GetInfo(){
+        //     var data = _db.NewsModels.();
+          
+        // }
 
         [HttpGet]
-        public IActionResult Anouncements()
-        {
-            return View();
-        }
+        public IActionResult Anouncements() => View();
 
         [HttpPost]
         public IActionResult Anouncements(AnouncementsModel AnM, IFormFile Doc)
@@ -147,7 +150,12 @@ namespace Coun.Controllers
         {
             return View();
         }
-
+        
+        [HttpGet]
+        public IActionResult UpdateNews(){
+            return View();
+        }
+       
         [HttpPost]
         public IActionResult Slider(SliderModel slideM, IFormFile slide)
         {

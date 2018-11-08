@@ -193,3 +193,4 @@ C:/Users/Munnim/Desktop/Coun/obj/Debug/netcoreapp2.1/Razor/Views/Home/MeetingSum
 /home/munnim/Desktop/count1/obj/Debug/netcoreapp2.1/Coun.pdb
 /home/munnim/Desktop/count1/obj/Debug/netcoreapp2.1/Coun.csproj.CopyComplete
 /home/munnim/Desktop/count1/obj/Debug/netcoreapp2.1/Razor/Views/Home/MaamigiliContact.g.cshtml.cs
+/home/munnim/Desktop/count1/obj/Debug/netcoreapp2.1/Razor/Views/Admin/UpdateNews.g.cshtml.cs

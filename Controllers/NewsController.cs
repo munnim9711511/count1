@@ -14,12 +14,14 @@ namespace Coun.Controllers {
         public NewsController (DataContext _db) {
             this._db = _db;
         }
+
+        [HttpGet]
+        
         public IActionResult Index (int id) {
            ViewBag.news = _db.NewsModels.Where(x=>x.Id == id).ToArray();
             return View (ViewBag);
         }
-        [HttpGet]
-       
+      
 
 
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
