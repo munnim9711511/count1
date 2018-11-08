@@ -3,5 +3,34 @@
 }
 
 <div ng-controller = "updateNews">
-{{Info}}
+     
+<ul style="font-size: large;">
+    @foreach (var item in ViewBag.news )
+{
+  <li class="dh">
+      <a href="@Url.Action("UpdateNew","Admin",new{id=@item.Id})">
+           <span>
+ <strong>
+          Title:
+
+      </strong>
+      </span>
+     
+      @item.Title
+
+
+           <span>
+ <strong>
+          Date:
+          
+      </strong>
+      </span>
+      @item.Date
+      </a>
+     
+  </li>
+}
+</ul>
+
+
 </div>

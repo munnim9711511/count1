@@ -138,6 +138,8 @@ namespace Coun.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Date");
+
                     b.Property<string>("ImgUrl");
 
                     b.Property<string>("Text");

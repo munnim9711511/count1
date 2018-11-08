@@ -1,0 +1,26 @@
+@{
+    Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <form action="updatenew" method="POST" enctype="multipart/form-data">
+    @foreach (var item in    ViewBag.news)
+    {
+         <div class="row">
+            <div class="col m8 input-field">
+                <input type="text" name="" value="@item.Title" style="font-family: Faruma;direction: rtl;">
+                <label for="">Title</label>
+            </div>
+        </div> 
+         <div class="row">
+            <div class="col m8">
+                <label for="">Image</label>
+                <br>
+
+                <input type="file" name=""  value="">
+            </div>
+        </div> 
+    }
+      
+    </form>
+</div>

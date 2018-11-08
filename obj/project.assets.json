@@ -11575,28 +11575,30 @@
     ]
   },
   "packageFolders": {
-    "/home/munnim/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Munnim\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/munnim/Desktop/count1/Coun.csproj",
+      "projectUniqueName": "C:\\Users\\Munnim\\Desktop\\count1\\Coun.csproj",
       "projectName": "Coun",
-      "projectPath": "/home/munnim/Desktop/count1/Coun.csproj",
-      "packagesPath": "/home/munnim/.nuget/packages/",
-      "outputPath": "/home/munnim/Desktop/count1/obj/",
+      "projectPath": "C:\\Users\\Munnim\\Desktop\\count1\\Coun.csproj",
+      "packagesPath": "C:\\Users\\Munnim\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Munnim\\Desktop\\count1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/munnim/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Munnim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
