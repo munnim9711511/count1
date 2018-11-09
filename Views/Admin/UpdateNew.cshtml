@@ -3,24 +3,38 @@
 }
 
 <div class="container">
-    <form action="updatenew" method="POST" enctype="multipart/form-data">
+    <form action="@Url.Action("UpdateNews","Admin")" method="POST" enctype="multipart/form-data">
     @foreach (var item in    ViewBag.news)
     {
          <div class="row">
             <div class="col m8 input-field">
-                <input type="text" name="" value="@item.Title" style="font-family: Faruma;direction: rtl;">
+                <input type="text" name="Title" value="@item.Title" style="font-family: Faruma;direction: rtl;">
                 <label for="">Title</label>
             </div>
         </div> 
-         <div class="row">
+          <div class="row hide">
+            <div class="col m8 input-field">
+                <input type="Id" name="Title" value="@item.Id" style="font-family: Faruma;direction: rtl;">
+                <label for="">Id</label>
+            </div>
+        </div>
+         <!-- <div class="row">
             <div class="col m8">
                 <label for="">Image</label>
                 <br>
 
                 <input type="file" name=""  value="">
             </div>
-        </div> 
+        </div> -->
+        <div class="row">
+            <div class="col m8 input-field">
+          <textarea id="textarea1" class="materialize-textarea dh " name="Text" style="direction: rtl;text-align: justify;">@item.Text</textarea>
+                <label for="">News</label>
+            </div>
+        </div>  
+
+
     }
-      
+      <input type="submit" value="update" class="btn">
     </form>
 </div>

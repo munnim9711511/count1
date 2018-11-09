@@ -16,6 +16,7 @@ using Newtonsoft.Json.Linq;
 namespace Coun.Controllers {
     // [Authorize(Roles = "Administrator")]
     public class AdminController : Controller {
+        private const string ControllerName = "Admin";
         private readonly DataContext _db;
         private readonly IHostingEnvironment he;
         public AdminController (DataContext _db, IHostingEnvironment he) {
@@ -55,7 +56,7 @@ namespace Coun.Controllers {
                 var fileName = Path.Combine (he.WebRootPath + "/newsImage", Path.GetFileName (NewsPic.FileName));
                 NewsPic.CopyTo (new FileStream (fileName, FileMode.Create));
                 NewsM.ImgUrl = Path.GetFileName (NewsPic.FileName);
-                NewsM.Date  = DateTime.Now.ToString();
+                NewsM.Date = DateTime.Now.ToString ();
                 _db.NewsModels.Add (NewsM);
                 _db.SaveChanges ();
 
@@ -135,13 +136,29 @@ namespace Coun.Controllers {
 
         [HttpGet]
         public IActionResult UpdateNews () {
-            ViewBag.news = _db.NewsModels.ToArray ().OrderByDescending(x=>x.Id);
+            ViewBag.news = _db.NewsModels.ToArray ().OrderByDescending (x => x.Id);
             return View (ViewBag);
         }
+
+        [HttpPost]
+        public IActionResult UpdateNews (NewsModel news) {
+            var entity = _db.NewsModels.FirstOrDefault (x => x.Id == news.Id);
+            if (entity != null) {
+                entity.Title = news.Title;
+                entity.Text = news.Text;
+                entity.Date = DateTime.Now.ToString ();
+                _db.NewsModels.Update (entity);
+                _db.SaveChanges ();
+            }
+          
+            // return RedirectToAction("UpdateNews", "admin");
+            return Content("test");
+        }
+
         [HttpGet]
-        public IActionResult UpdateNew(int id){
-            ViewBag.news = _db.NewsModels.Where(x=>x.Id == id).ToArray();
-            return View(ViewBag);
+        public IActionResult UpdateNew (int id) {
+            ViewBag.news = _db.NewsModels.Where (x => x.Id == id).ToArray ();
+            return View (ViewBag);
         }
 
         [HttpPost]
